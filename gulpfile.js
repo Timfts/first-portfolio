@@ -2,7 +2,7 @@ const gulp = require('gulp'),
       browserSync = require('browser-sync'),
       sass = require('gulp-sass'),
       cssNano = require('gulp-cssnano'),
-      babel = require('gulp-babel');
+      autoprefixer = require('gulp-autoprefixer');
 
 const paths = {
     srcIndex:'./src/index.html',
@@ -16,7 +16,7 @@ const paths = {
 
 gulp.task('html', () => {
     return gulp.src(paths.srcIndex)
-    .pipe(gulp.output(paths.outputRoot))
+    .pipe(gulp.dest(paths.outputRoot))
     .pipe(browserSync.stream());
 });
 
@@ -30,7 +30,7 @@ gulp.task('sass', () => {
         browsers: ['last 2 versions'],
         cascade: false
     }))
-    .pipe(cssnano())
+    .pipe(cssNano())
     .pipe(gulp.dest(paths.outputStyle))
     .pipe(browserSync.stream());
 });
