@@ -8,15 +8,23 @@ const paths = {
     srcIndex:'./src/index.html',
     srcStyles:'./src/sass/**/*.scss',
     srcScript: './src/js/app.js',
+    srcImages:'./src/img/**/*.+(png|jpg|jpg|jpeg|gif|svg)',
     outputRoot: './docs',
     outputStyle: './docs/css',
-    outputScript: './docs/js'
+    outputScript: './docs/js',
+    outputImages: './docs/img'
 
 };
 
 gulp.task('html', () => {
     return gulp.src(paths.srcIndex)
     .pipe(gulp.dest(paths.outputRoot))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('images', () => {
+    return gulp.src(paths.srcImages)
+    .pipe(gulp.dest(paths.outputImages))
     .pipe(browserSync.stream());
 });
 
@@ -44,4 +52,5 @@ gulp.task('server', () => {
     });
     gulp.watch(paths.srcStyles,['sass']);
     gulp.watch(paths.srcIndex,['html'] );
+    gulp.watch(paths.srcImages,['images'] );
 });

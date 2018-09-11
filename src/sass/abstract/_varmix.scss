@@ -1,0 +1,40 @@
+$color-cream:#F2E4C7;
+$color-black:#000000;
+$color-blue-one:#1E2F30;
+$color-blue-two:#314C4E;
+$color-blue-grey-one:#5A8487;
+$color-blue-grey-two:#3D585A;
+
+$color-book-bg:#2D2525;
+$color-stamp-text:#A47272;
+$color-stamp-outline:#E09B9B;
+
+
+$color-wcid-icon-bg:#FFE99D;
+$color-wcid-icon-one:#E06565;
+
+
+
+@mixin clearfix {
+    &::after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media( max-width:37.5em) { @content }
+    }
+    @if $breakpoint == tab-port {
+        @media( max-width: 56.25em) { @content }
+    }
+    @if $breakpoint == tab-land {
+        @media( max-width: 75em) { @content }
+    }
+    @if $breakpoint == big-desk {
+        @media( min-width: 112.5em) { @content }
+    }
+}

@@ -1,3 +1,29 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin:0px;
+    padding:0px;
+}
+
+html {
+    font-size:63.5%;
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+    
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    @include respond(big-desk) {
+        font-size: 75%;
+    }
+
+}
+
 body {
-    background-color:red;
+    box-sizing: border-box;
+    filter:blur(0.05em);
 }
