@@ -1,0 +1,38 @@
+.detail {
+
+    width:6rem;
+    position:absolute;
+    transform-origin: center;
+
+    &,
+    &::before {
+        height:2px;
+        background-color:$color-blue-two;
+        display:inline-block;
+    }
+
+
+    &::before {
+        content:"";
+        width: 3rem;
+        top:-1.4rem;
+        left:50%;
+        transform:translateX(-50%);
+        position:absolute;
+
+    }
+
+    &--home {
+        &-one {
+            top:12%;
+            left:0;
+            transform: rotate(-50deg);
+        }
+        &-two {
+            bottom:0;
+            right:0;
+            transform: rotate(125deg);
+        }
+    }
+
+}

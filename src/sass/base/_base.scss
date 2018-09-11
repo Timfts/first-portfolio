@@ -25,5 +25,12 @@ html {
 
 body {
     box-sizing: border-box;
-    filter:blur(0.05em);
+    //filter:blur(0.05em);
+}
+
+.container {
+    max-width:114rem;
+    height:100%;
+    position:relative;
+    margin:0 auto;
 }
