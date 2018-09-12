@@ -27,6 +27,10 @@
             top:12%;
             left:0;
             transform: rotate(-50deg);
+
+            @include respond(tab-port) {
+                top:8%;
+            }
         }
         &-two {
             bottom:0;

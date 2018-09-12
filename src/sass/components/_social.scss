@@ -35,5 +35,26 @@
         position: absolute;
         bottom:10%;
         left:0;
+
+    }
+
+    @include respond(tab-land) {
+
+        width:24rem;
+        &__li {
+            margin-bottom:0;
+            display:inline-block;
+        }
+        &__li:not(:last-of-type){
+
+            margin-right:2rem;
+        }
+
+        &--home {
+            left:50%;
+            transform:translateX(-50%);
+            bottom:5%;
+        }
+            
     }
 }
