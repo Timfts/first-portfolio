@@ -2,7 +2,9 @@ const gulp = require('gulp'),
       browserSync = require('browser-sync'),
       sass = require('gulp-sass'),
       cssNano = require('gulp-cssnano'),
-      autoprefixer = require('gulp-autoprefixer');
+      autoprefixer = require('gulp-autoprefixer'),
+      sourcemap = require('gulp-sourcemaps');
+      //autoprefixer = require('gulp-autoprefixer');
 
 const paths = {
     srcIndex:'./src/index.html',
@@ -32,13 +34,12 @@ gulp.task('images', () => {
 gulp.task('sass', () => {
     return gulp.src(paths.srcStyles)
     .pipe(sass({
+        errLogToConsole: true,
         outputStyle:'compressed'
-    }).on('error', sass.logError))
-    .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false
-    }))
-    .pipe(cssNano())
+    })
+    .on('error', sass.logError))
+    .pipe(sourcemap.write('./docs/css/maps'))
+    .pipe(autoprefixer())
     .pipe(gulp.dest(paths.outputStyle))
     .pipe(browserSync.stream());
 });
