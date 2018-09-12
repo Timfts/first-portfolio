@@ -1,0 +1,39 @@
+.social {
+
+
+    &__li:not(:last-of-type){
+        margin-bottom:2rem;
+    }
+    &__icon {
+        fill:$color-main-blue;
+        width:2rem;
+        height:2rem;
+        transition: all .2s;
+
+        &--instagram:hover {
+            fill:$instagram;
+        }
+
+        &--github:hover {
+            fill:$github;
+        }
+
+        &--linkedin:hover {
+            fill:$linkedin;
+        }
+
+        &--behance:hover {
+            fill:$behance;
+        }
+
+        &--twitter:hover {
+            fill:$twitter;
+        }
+    }
+
+    &--home {
+        position: absolute;
+        bottom:10%;
+        left:0;
+    }
+}

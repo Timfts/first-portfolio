@@ -4,8 +4,15 @@ body {
     font-family: 'Cutive Mono', monospace;
     background-color:$color-cream;
 }
+a {
+    text-decoration: none;
+}
 
 h1,
 h2 {
     font-weight: normal;
+}
+
+ul {
+    list-style: none;
 }
