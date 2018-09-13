@@ -25,7 +25,7 @@ html {
 
 body {
     box-sizing: border-box;
-    filter:blur(0.04em);
+    
 }
 
 .container {
@@ -33,4 +33,8 @@ body {
     height:100%;
     position:relative;
     margin:0 auto;
+
+    @include respond (big-desk) {
+        max-width:80%;
+    }
 }

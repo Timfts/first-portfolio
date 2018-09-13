@@ -1,0 +1,125 @@
+.navigation {
+
+
+    color:$color-cream;
+
+    &__checkbox {
+        display:none;
+    }
+
+    &__button,
+    &__background {
+        right:calc((100% - 114rem) / 2) ;
+        box-shadow:0 1rem 3rem rgba($color-black, .1);
+        position:fixed;
+
+
+        @include respond(tab-land) {
+            right:7%;
+        }
+
+        @include respond(tab-port) {
+            right:3%;
+        }
+
+    }
+
+    &__button {
+        width:6rem;
+        height:6rem;
+        top:7%;
+        transform: skewY(6deg);
+        background-color:$color-main-blue;
+        transition: all .3s;
+        z-index:2000;
+        cursor:pointer;
+
+        & > * {
+            left:50%;
+            transform: skewY(-6deg) translateX(-50%);
+        }
+
+        @include respond(tab-port) {
+            top:3%;
+        }
+    }
+
+    &__background {
+        top:7.5%;
+        width:5.5rem;
+        height: 5.5rem;
+        background-color:$color-main-blue;
+        transition:height .5s, width .5s .5s;
+        z-index:1000;
+
+        @include respond(tab-port) {
+            top:3%;
+        }
+
+    }
+
+    &__icon,
+    &__title {
+        position:absolute;
+    }
+
+    &__icon {
+        top:2rem;
+
+
+        &,
+        &::before,
+        &::after {
+            background-color:$color-cream;
+            display: inline-block;
+            height:.3rem;
+            width:2.5rem;
+
+        }
+
+        &::before,
+        &::after {
+            content:"";
+            position:absolute;
+            left:0;
+            transition:all .2s;
+
+        }
+
+        &::before {
+            top:-.8rem;
+        }
+
+        &::after {
+            top :.8rem;
+        }
+    }
+
+    &__title {
+        font-size: 1.2rem;
+        bottom:.8rem;
+    }
+
+
+    &__checkbox:checked ~ &__background {
+        width:114rem;
+        height:calc(100vh - 12%);
+        background-color:$color-blue-one;
+
+        @include respond(tab-land) {
+            width:94%;
+            height:calc(100vh - 6%);
+        }
+    }
+
+    &__checkbox:checked ~ &__button {
+        background-color:$color-wcid-icon-one;
+        transform: skewY(0deg);
+
+        & > * {
+            transform: skewY(0deg) translateX(-50%);
+        }
+    }
+
+
+}

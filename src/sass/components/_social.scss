@@ -1,5 +1,13 @@
 .social {
 
+    &--home {
+        position: absolute;
+        bottom:10%;
+        left:0;
+
+        
+    }
+
 
     &__li:not(:last-of-type){
         margin-bottom:2rem;
@@ -35,12 +43,16 @@
         position: absolute;
         bottom:10%;
         left:0;
+    }
+
+    &--footer {
 
     }
 
     @include respond(tab-land) {
 
         width:24rem;
+
         &__li {
             margin-bottom:0;
             display:inline-block;
