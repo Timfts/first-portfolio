@@ -13,4 +13,12 @@
     & > * {
         transform: skewY(-6deg);
     }
+
+    @include respond(tab-port) {
+        padding:18rem 3rem;
+    }
+
+    @include respond(phone) {
+        padding:10rem 3rem;
+    }
 }
