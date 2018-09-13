@@ -27,7 +27,7 @@
     &__button {
         width:6rem;
         height:6rem;
-        top:7%;
+        top:6.5%;
         transform: skewY(6deg);
         background-color:$color-main-blue;
         transition: all .3s;
@@ -45,11 +45,11 @@
     }
 
     &__background {
-        top:7.5%;
-        width:5.5rem;
-        height: 5.5rem;
+        top:6.6%;
+        width:4rem;
+        height: 4rem;
         background-color:$color-main-blue;
-        transition:height .5s, width .5s .5s;
+        transition:height .5s cubic-bezier(.5,.14,.51,.45), width .5s cubic-bezier(.5,.14,.51,.45) .5s;
         z-index:1000;
 
         @include respond(tab-port) {
@@ -104,7 +104,7 @@
     &__checkbox:checked ~ &__background {
         width:114rem;
         height:calc(100vh - 12%);
-        background-color:$color-blue-one;
+        
 
         @include respond(tab-land) {
             width:94%;
@@ -119,6 +119,20 @@
         & > * {
             transform: skewY(0deg) translateX(-50%);
         }
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color:transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        top:0;
+        transform: rotate(135deg);
+    }
+    
+    &__checkbox:checked + &__button &__icon::after {
+        top:0;
+        transform: rotate(-135deg);
     }
 
 

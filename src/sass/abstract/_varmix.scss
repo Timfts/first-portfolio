@@ -47,3 +47,12 @@ $color-wcid-icon-one:#E06565;
     }
 }
 
+@keyframes writing {
+    from { width: 0 }
+    to { width: 65rem }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: $color-blue-two }
+}

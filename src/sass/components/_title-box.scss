@@ -21,8 +21,23 @@
     }
 
     &__subtitle {
+        max-width:65rem;
         font-size:3rem;
         color:$color-blue-grey-one;
         letter-spacing: -2px;
+        margin:0 auto;
+        box-decoration-break: clone;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: .2rem solid  $color-blue-grey-one;
+        animation: 
+        writing 3.5s steps(30, end),
+        blink-caret .5s step-end infinite;
+
+        @include respond(phone) {
+            animation:none;
+            white-space: initial;
+            border-right:none;
+        }
     }
 }
