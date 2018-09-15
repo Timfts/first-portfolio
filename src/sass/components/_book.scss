@@ -6,6 +6,7 @@
     height:50rem;
     margin:0 auto;
     perspective: 150rem;
+    line-height: 140%;
     box-shadow: 0px 7px 35px -9px rgba($color-black,0.75);
 
     &__inner {
@@ -21,12 +22,14 @@
         width:50%;
         height:100%;
         float:left;
-        padding:2rem 2rem;
+        padding:2rem 2.7rem;
         background-color:$color-cream;
+
 
     }
 
     &__about-page {
+        position:relative;
         &--back-cover {
             border-radius: 4.4rem 0 0 4.4rem;
             box-shadow: inset -10px 0 30px -10px rgba(0,0,0,.3), -2px 2px 1px rgba(0,0,0,.8);
@@ -44,11 +47,13 @@
         transition:all .8s ease;
         top:0;
         backface-visibility: hidden;
+        text-align: center;
 
         &--front {
             transform-origin: right;
             border-radius: 4.44rem 0 0 4.4rem;
             left:0;
+            padding-top:18rem;
             transform:rotateY(180deg);
             border-left: 1px solid $color-blue-grey-one;
             box-shadow: inset -10px 0 30px -10px rgba(0,0,0,.3), -2px 2px 1px rgba(0,0,0,.8);
@@ -63,6 +68,49 @@
             //background-color:grey;
         }
     }
+
+    &__p-image {
+        width:10rem;
+        height:10rem;
+        border:.5rem $color-main-blue solid;
+        border-radius:20rem;
+        position:absolute;
+        top: 4.5rem;
+        left:50%;
+        transform:translateX(-50%);
+        
+        
+    }
+
+    &__p-name {
+        color:$color-main-blue;
+        font-weight: bolder;
+        margin-bottom:2.5rem;
+    }
+
+    &__p-desc {
+        text-align: left;
+        color:$color-blue-one;
+        
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 2rem;
+        margin:2rem 0 2rem 0;
+    }
+
+    &__courses {
+
+        &--desc {
+            font-size: 1.4rem;
+            color:$color-blue-grey-one;
+            line-height: 1.5;
+            word-spacing: 1px;
+        }
+    }
+
+
 
     &:hover &__flip-page--front {
         transform:rotateY(0deg);

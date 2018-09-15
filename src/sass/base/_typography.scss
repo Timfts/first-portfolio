@@ -1,7 +1,9 @@
 body {
-    font-size:1.6rem;
+    font-size:1.7rem;
     color:$color-blue-two;
     font-family: 'Cutive Mono', monospace;
+    word-spacing: -5px;
+    letter-spacing: -1px;
     background-color:$color-cream;
 }
 a {
@@ -11,6 +13,18 @@ a {
 h1,
 h2 {
     font-weight: normal;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.3rem;
+}
+
+h3 {
+
 }
 
 ul {
