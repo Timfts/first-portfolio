@@ -86,6 +86,7 @@
         color:$color-main-blue;
         font-weight: bolder;
         margin-bottom:2.5rem;
+        font-size:3rem;
     }
 
     &__p-desc {
@@ -96,20 +97,72 @@
 
     &__title {
         text-align: center;
-        font-size: 2rem;
-        margin:2rem 0 2rem 0;
+        font-size: 2.5rem;
+        margin:1rem 0 2rem 0;
     }
 
-    &__courses {
+    &__tech {
 
-        &--desc {
-            font-size: 1.4rem;
-            color:$color-blue-grey-one;
-            line-height: 1.5;
-            word-spacing: 1px;
+        &-list {
+            margin-top:3rem;
+            width:80%;
+            margin:0 auto;
         }
-    }
 
+        &-item{
+            &:not(:last-of-type){
+                margin-bottom:2rem;
+
+                @include respond(tab-land){
+                    margin-bottom:2rem;
+                }
+
+            }
+        }
+
+        &-title {
+            //text-align: center;
+            margin-bottom:1rem;
+            & > * {
+                display: inline-block;
+                vertical-align: top;
+
+            }
+        }
+
+        &-icon {
+            width:3.2rem;
+            height:3.2rem;
+
+            &--html5 {
+                fill:#e34f26;
+            }
+
+            &--javascript {
+                fill:#ca8606;
+            }
+
+            &--design {
+                fill:#6e5494;
+            }
+
+            &--tools {
+                fill:#cd486b;
+            }
+        }
+
+        &-desc {
+            font-size: 1.4rem;
+        }
+
+        &-name {
+            font-weight: normal;
+            font-size: 1.9rem;
+            margin-top:.65rem;
+        }
+
+
+    }
 
 
     &:hover &__flip-page--front {
