@@ -98,7 +98,7 @@
     &__title {
         text-align: center;
         font-size: 2.5rem;
-        margin:1rem 0 2rem 0;
+        margin:1rem 0 2.5rem 0;
     }
 
     &__tech {
@@ -122,7 +122,7 @@
 
         &-title {
             //text-align: center;
-            margin-bottom:1rem;
+            margin-bottom:.8rem;
             & > * {
                 display: inline-block;
                 vertical-align: top;
@@ -130,29 +130,37 @@
             }
         }
 
+        &:hover > &-icon {
+            transform:skew(1.1);
+        }
+
         &-icon {
             width:3.2rem;
             height:3.2rem;
+            transition: all .2s;
 
             &--html5 {
                 fill:#e34f26;
             }
 
             &--javascript {
-                fill:#ca8606;
+                fill:#dab201;
             }
 
             &--design {
-                fill:#6e5494;
+                fill:#546a94;
             }
 
             &--tools {
                 fill:#cd486b;
             }
+
+
         }
 
         &-desc {
             font-size: 1.4rem;
+            color:$color-blue-grey-one;
         }
 
         &-name {
@@ -182,7 +190,7 @@
         &__about-page,
         &__flip-page {
             width:100%;
-            height:50rem;
+            height:55rem;
             float:none;
         }
 
