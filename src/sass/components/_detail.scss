@@ -53,4 +53,28 @@
         }
     }
 
+    &--wcid,
+    &--wcid::before{
+        background-color:$color-cream;
+
+        @include respond(phone){
+            display:none;
+        }
+
+    }
+
+    &--wcid {
+        top:50%;
+
+        &-one {
+            left:0;
+            transform: rotate(271deg) translateY(-50%);
+        }
+
+        &-two {
+            right:0;
+            transform: rotate(91deg) translateY(-50%);
+        }
+    }
+
 }

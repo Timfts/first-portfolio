@@ -11,7 +11,9 @@ a {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
     font-weight: normal;
 }
 
@@ -20,7 +22,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5343rem;
+    font-size: 4.5232rem;
 }
 
 h3 {
@@ -33,6 +35,7 @@ ul {
 
 .section-title {
     text-align: center;
+    font-size:3rem;
     &--light{
         color:$color-cream;
     }

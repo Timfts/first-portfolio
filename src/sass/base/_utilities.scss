@@ -1,0 +1,10 @@
+.u-margin{
+    &-bottom-medium {
+        margin-bottom:10rem;
+
+        @include respond(phone){
+            margin-bottom:8rem;
+        }
+    }
+}
+

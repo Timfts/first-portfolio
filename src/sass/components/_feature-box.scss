@@ -1,0 +1,97 @@
+.feature-box {
+    position:relative;
+
+
+    &__container {
+        width:65%;
+        margin:0 auto;
+        background-color:$color-cream;
+        padding:4.5rem;
+        transform:skew(-12deg);
+        box-shadow:0 1rem 3rem rgba($color-black, .1);
+
+        @include clearfix;
+
+        & > * {
+            transform:skew(12deg);
+        }
+
+
+    }
+
+    &__shape {
+        width:13rem;
+        height:13rem;
+        border-radius: 20rem;
+        border-width: .7rem;
+        border-style: solid;
+        background-color:$color-wcid-icon-bg;
+        shape-outside: circle(50% at 50% 50%);
+        position:relative;
+
+        &--design {
+            float:left;
+            border-color: $color-wcid-icon-one;
+            margin-right:2.4rem;
+        }
+
+        &--develop {
+            float:right;
+            border-color:$color-main-blue;
+            margin-left:2.4rem;
+        }
+
+    }
+
+    &__text {
+
+
+        &--develop {
+            text-align: right;
+        }
+    }
+
+    &__title {
+        margin-bottom:1.5rem;
+    }
+
+    &__desc {
+        line-height: 1.4;
+    }
+
+    @include respond(phone){
+
+        
+
+        &__container {
+            transform:skew(0);
+            padding-top:21rem;
+            width:85%;
+
+            & > * {
+                transform:skew(0);
+            }
+        }
+
+        &__shape {
+            float:none;
+            margin-bottom:2rem;
+            position:absolute;
+            top:4rem;
+            left:50%;
+            transform:skew(0) translateX(-50%);
+            margin-left:0;
+            margin-right:0;
+
+        }
+
+        &__text {
+            text-align: left;
+        }
+
+        &__title {
+            text-align: center;
+            margin-bottom:3rem;
+        }
+    }
+}
