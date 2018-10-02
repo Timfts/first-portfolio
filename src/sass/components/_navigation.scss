@@ -10,7 +10,7 @@
     &__button,
     &__background {
         right:calc((100% - 114rem) / 2) ;
-        box-shadow:0 1rem 3rem rgba($color-black, .1);
+        box-shadow:$shadow;
         position:fixed;
 
 

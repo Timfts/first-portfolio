@@ -8,7 +8,7 @@
         background-color:$color-cream;
         padding:4.5rem;
         transform:skew(-12deg);
-        box-shadow:0 1rem 3rem rgba($color-black, .1);
+        box-shadow:$shadow;
 
         @include clearfix;
 
@@ -86,7 +86,7 @@
         }
 
         &__text {
-            text-align: left;
+            text-align: center;
         }
 
         &__title {

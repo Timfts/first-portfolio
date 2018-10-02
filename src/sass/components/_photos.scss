@@ -1,0 +1,54 @@
+.photos {
+    @include clearfix;
+
+
+    &__photo {
+        background-color:$color-cream;
+        //width:20rem;
+        //height:25rem;
+
+        width:calc((100% - 3 * 4rem) / 4);
+        height:30rem;
+        float:left;
+        margin-bottom:4rem;
+        
+        &:not(:last-of-type){
+            margin-right:4rem;
+        }
+    }
+
+    @include respond(tab-land){
+        width:85%;
+        margin:0 auto;
+
+
+        &__photo {
+            width:calc((100% - 3 * 4rem) / 3);
+            
+            &:not(:last-of-type){
+                margin-right:0;
+            }
+            &:not(:nth-of-type(3n)){
+                margin-right:4rem;
+            }
+            
+        }
+    }
+
+    @include respond(phone){
+        &__photo {
+
+            &:not(:nth-of-type(3n)),
+            &:nth-of-type(3n){
+                margin-right:auto;
+                margin-left:auto;
+            }
+
+            width:75%;
+            float:none;
+
+        }
+    }
+
+    
+}
