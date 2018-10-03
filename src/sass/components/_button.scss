@@ -1,0 +1,29 @@
+.button {
+    background-color:transparent;
+    text-transform: uppercase;
+    border:.4rem $color-stamp-outline solid;
+    font-family: inherit;
+    transition:all .5s;
+    border-radius: 1rem;
+    color:$color-stamp-text;
+
+    &__link{
+        display: block;
+        padding:1rem;
+        color:inherit;
+    }
+
+    &--small {
+        font-size: 1.8rem;
+    }
+
+    &--big {
+        font-size: 4.5232rem;
+    }
+
+    &:hover {
+        background-color:$color-blue-two;
+        border-color: $color-blue-grey-one;
+        color:#fff;
+    }
+}

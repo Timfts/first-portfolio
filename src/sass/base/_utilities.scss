@@ -6,5 +6,21 @@
             margin-bottom:8rem;
         }
     }
+
+    &-bottom-small {
+        margin-bottom:7rem;
+
+        @include respond(phone){
+            margin-bottom:5rem;
+        }
+    }
+
+    &-bottom-very-small {
+        margin-bottom:4rem;
+
+        @include respond(phone){
+            margin-bottom:3rem;
+        }
+    }
 }
 
