@@ -17,12 +17,16 @@
   },
   "homepage": "https://github.com/TimFont/firstPortfolio#readme",
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
     "autoprefixer": "^9.1.5",
     "browser-sync": "^2.24.7",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
-    "gulp-cssnano": "^2.1.3",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.4"
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1"
   }
 }
