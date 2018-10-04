@@ -34,4 +34,9 @@
         width:15rem;
         
     }
+
+    @include respond(phone){
+        margin-top:6rem;
+        margin-bottom:1rem;
+    }
 }

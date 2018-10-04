@@ -66,6 +66,10 @@
         width:50%;
         margin-bottom:9rem;
         line-height: 1.5;
+
+        @include respond(phone){
+            width:70%;
+        }
     }
 
     &__button {
@@ -85,4 +89,11 @@
     
     padding-top:15rem;
     text-align:center;
+
+    &__copy {
+        @include respond(phone){
+            width:70%;
+            margin:0 auto;
+        }
+    }
 }

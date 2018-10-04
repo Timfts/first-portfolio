@@ -87,6 +87,8 @@
         font-weight: bolder;
         margin-bottom:2.5rem;
         font-size:3rem;
+
+        
     }
 
     &__p-desc {
@@ -218,6 +220,20 @@
                 display:none;
             }
         }
+
+        &__title {
+            margin-top:2.5rem;
+        }
+
+        &__p-desc {
+            text-align:center;
+        }
+
+        &__p-name {
+             margin-bottom:5rem;
+            
+        }
+
     }
 
 

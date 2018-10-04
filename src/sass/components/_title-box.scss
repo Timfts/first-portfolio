@@ -18,6 +18,10 @@
     &__title {
         font-size:4.5232rem;
         margin-bottom:2rem;
+
+        @include respond(phone){
+            margin-bottom:4rem;
+        }
     }
 
     &__subtitle {
