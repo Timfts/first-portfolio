@@ -175,13 +175,25 @@
     }
 
 
-    &:hover &__flip-page--front {
+    /*&:hover &__flip-page--front {
         transform:rotateY(0deg);
 
     }
     &:hover &__flip-page--back {
         transform:rotateY(-180deg);
 
+    }*/
+
+    &--active {
+
+
+        .book__flip-page--front {
+            transform:rotateY(0deg);
+        }
+
+        .book__flip-page--back { 
+            transform:rotateY(-180deg);
+        }
     }
 
 
