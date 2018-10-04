@@ -77,4 +77,35 @@
         }
     }
 
+    &--mw {
+
+        &-one {
+            
+            transform:rotate(-65deg);
+            top:10%;
+            left: -5.7rem;
+        }
+
+        &-two {
+            transform:rotate(114deg);
+            bottom:5%;
+            right: -5.5rem;
+
+        }
+    }
+
+    &--cont {
+        &-one{
+            top:-8rem;
+            right:0;
+            transform:rotate(33deg);
+        }
+
+        &-two{
+            bottom:-8rem;
+            left:0;
+            transform:rotate(225deg);
+        }
+    }
+
 }

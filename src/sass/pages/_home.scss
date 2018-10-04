@@ -51,3 +51,38 @@
         transform: skewY(6deg);
     }
 }
+
+.section-contact {
+    padding-top:10rem;
+    text-align: center;
+    
+
+    &__paragraph,
+    &__button {
+        display:block;
+        margin:0 auto;
+    }
+    &__paragraph {
+        width:50%;
+        margin-bottom:9rem;
+        line-height: 1.5;
+    }
+
+    &__button {
+        margin-bottom:2rem;
+        width:40%;
+
+        @include respond(phone){
+            font-size:1.9rem;
+            width:80%;
+        }
+    }
+
+
+}
+
+.footer {
+    
+    padding-top:15rem;
+    text-align:center;
+}

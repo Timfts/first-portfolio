@@ -1,0 +1,37 @@
+.more-work {
+    position:relative;
+    width:15rem;
+    margin:3rem auto 7rem auto;
+   
+
+    &__link {
+        display:block;
+
+        & > * {
+            display:block;
+        }
+        
+    }
+
+    &__link:hover &__text {
+        color:$behance;
+    }
+
+    &__link:hover &__behance {
+        fill:$behance;
+    }
+
+    &__text,
+    &__behance {
+        transition:all .5s;
+    }
+
+    &__text {
+        font-size: 2.3rem;
+    }
+    &__behance {
+        fill:$color-main-blue;
+        width:15rem;
+        
+    }
+}

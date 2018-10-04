@@ -9,6 +9,8 @@
     }
 
 
+
+
     &__li:not(:last-of-type){
         margin-bottom:2rem;
     }
@@ -41,7 +43,17 @@
 
 
     &--footer {
+        width:24rem;
+        margin:2.5rem auto;
 
+        & .social__li {
+            margin-bottom:0;
+            display:inline-block;
+        }
+        & .social__li:not(:last-of-type){
+
+            margin-right:2rem;
+        }
     }
 
     @include respond(tab-land) {
