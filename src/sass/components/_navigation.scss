@@ -50,6 +50,7 @@
         height: 4rem;
         background-color:$color-main-blue;
         transition:height .5s cubic-bezier(.5,.14,.51,.45), width .5s cubic-bezier(.5,.14,.51,.45) .5s;
+        will-change: transform;
         z-index:1000;
 
         @include respond(tab-port) {
