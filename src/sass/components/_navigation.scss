@@ -46,12 +46,12 @@
 
     &__background {
         top:6.6%;
-        width:4rem;
-        height: 4rem;
+        width:3rem;
+        height: 3rem;
         background-color:$color-main-blue;
-        //transition:height .5s cubic-bezier(.5,.14,.51,.45), width .5s cubic-bezier(.5,.14,.51,.45) .5s;
-        transition:transform 1.5s ease-in-out;
-        will-change: transform;
+        transition:height .5s cubic-bezier(.5,.14,.51,.45), width .5s cubic-bezier(.5,.14,.51,.45) .5s;
+        //transition:transform 1.5s ease-in-out;
+        //will-change: transform;
         z-index:1000;
 
         @include respond(tab-port) {
@@ -104,18 +104,18 @@
 
 
     &__checkbox:checked ~ &__background {
-        //width:114rem;
-        //height:calc(100vh - 12%);
+        width:114rem;
+        height:calc(100vh - 12%);
 
-        transform:scale(10);
-        transform-origin: 100% 0%;
+        //transform:scale(30);
+       // transform-origin: 100% 0%;
 
         
         
 
         @include respond(tab-land) {
-            //width:94%;
-            //height:calc(100vh - 6%);
+            width:94%;
+            height:calc(100vh - 6%);
         }
     }
 

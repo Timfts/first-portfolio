@@ -35,14 +35,13 @@ const elements = {
     svgLap: $('.feature-box__svg--laptop')
 };
 
-
 //Scroll animations
 
 const posTriggers = {
     book: elements.book.parentElement.offsetTop,
     bookParentSize: elements.book.parentElement.offsetHeight,
-    featureBoxOne: elements.featureBoxOne.offsetTop + elements.wcidSection.offsetTop + (elements.featureBoxOne.offsetHeight / 2),
-    featureBoxTwo: elements.featureBoxTwo.offsetTop + elements.wcidSection.offsetTop + (elements.featureBoxTwo.offsetHeight / 2)
+    featureBoxOne: elements.featureBoxOne.offsetTop + elements.wcidSection.offsetTop + elements.featureBoxOne.offsetHeight,
+    featureBoxTwo: elements.featureBoxTwo.offsetTop + elements.wcidSection.offsetTop + elements.featureBoxTwo.offsetHeight 
 }
 
 function checkSlide(e){
