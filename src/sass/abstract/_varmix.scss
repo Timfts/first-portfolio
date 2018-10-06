@@ -60,3 +60,12 @@ $shadow: 0px 7px 35px -9px rgba($color-black,0.75);
     from, to { border-color: transparent }
     50% { border-color: $color-blue-two }
 }
+
+@keyframes wcidSvg {
+    from {
+        stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset:0;
+    }
+}

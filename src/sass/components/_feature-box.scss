@@ -28,6 +28,7 @@
         background-color:$color-wcid-icon-bg;
         shape-outside: circle(50% at 50% 50%);
         position:relative;
+        overflow: hidden;
 
         &--design {
             float:left;
@@ -41,7 +42,79 @@
             margin-left:2.4rem;
         }
 
+
     }
+
+
+    &__svg {
+        position:absolute;
+
+
+        &--pen {
+            width:9rem;
+            height:9rem;
+            top:1.2rem;
+            left:1.5rem;
+            stroke:$color-wcid-icon-one;
+            fill:none;
+            
+
+            & .circle {
+                transition:all 5s ease-in 2s;
+            }
+
+            & .path,
+            & .line,
+            & .circle {
+                stroke-dasharray:1000;
+                stroke-dashoffset: 1000;
+            }
+
+            &-active {
+                & .path,
+                & .line {
+                    stroke-dashoffset: 0;
+                }
+
+                & .path{
+                    animation:wcidSvg 1.5s ease-in;
+                    
+                }
+        
+                & .line{
+                    animation:wcidSvg 5s ease-in-out ;
+                }
+        
+                & .circle {
+                    fill:$color-wcid-icon-one;
+                }
+            }
+     
+        }
+
+        &--laptop {
+            stroke:$color-main-blue;
+            stroke-width:18;
+            width:10rem;
+            height:10rem;
+            top:.8rem;
+            left:.75rem;
+
+            & .lapPath {
+                stroke-dasharray:1000;
+                stroke-dashoffset: 1000;
+            }
+
+            &-active {
+                & .lapPath{
+                    stroke-dashoffset: 0;
+                    animation:wcidSvg 1.5s ease-in;
+                    
+                }
+            }
+        }
+    }
+
 
     &__text {
 
