@@ -1,7 +1,8 @@
 //Helpers
 
-function $(query){
-    return document.querySelector(query);
+function $(query, quant = 'one'){
+    if(quant === 'one') return document.querySelector(query);
+    else if(quant === 'two') return document.querySelectorAll(query);
 }
 
 function debounce(func, wait = 20, immediate = true){
@@ -26,7 +27,12 @@ function debounce(func, wait = 20, immediate = true){
 //Elements
 
 const elements = {
-    book : $('.book')
+    book : $('.book'),
+    wcidSection: $('.section-wcid'),
+    featureBoxOne: $('.feature-box', 'two')[0],
+    featureBoxTwo: $('.feature-box', 'two')[1],
+    svgPen: $('.feature-box__svg--pen'),
+    svgLap: $('.feature-box__svg--laptop')
 };
 
 
@@ -34,17 +40,28 @@ const elements = {
 
 const posTriggers = {
     book: elements.book.parentElement.offsetTop,
-    bookParentSize: elements.book.parentElement.offsetHeight
+    bookParentSize: elements.book.parentElement.offsetHeight,
+    featureBoxOne: elements.featureBoxOne.offsetTop + elements.wcidSection.offsetTop + (elements.featureBoxOne.offsetHeight / 2),
+    featureBoxTwo: elements.featureBoxTwo.offsetTop + elements.wcidSection.offsetTop + (elements.featureBoxTwo.offsetHeight / 2)
 }
 
 function checkSlide(e){
     const halfScreen = window.scrollY + (window.innerHeight / 2);
+    const bottomPos = window.scrollY + window.innerHeight;
 
     if(screen.width >= 600){
 
         if(halfScreen > posTriggers.book) elements.book.classList.add('book--active');
         else elements.book.classList.remove('book--active');
 
+    }
+
+    if(bottomPos >= posTriggers.featureBoxOne){
+        elements.svgPen.classList.add('feature-box__svg--pen-active');
+    }
+
+    if(bottomPos >= posTriggers.featureBoxTwo){
+        elements.svgLap.classList.add('feature-box__svg--laptop-active');
     }
     
 
