@@ -48,6 +48,9 @@ function checkSlide(e){
     const halfScreen = window.scrollY + (window.innerHeight / 2);
     const bottomPos = window.scrollY + window.innerHeight;
 
+    
+    console.log(bottomPos, posTriggers.featureBoxTwo, posTriggers.featureBoxTwo);
+
     if(screen.width >= 600){
 
         if(halfScreen > posTriggers.book) elements.book.classList.add('book--active');
