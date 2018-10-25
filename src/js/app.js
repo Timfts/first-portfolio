@@ -32,7 +32,9 @@ const elements = {
     featureBoxOne: $('.feature-box', 'two')[0],
     featureBoxTwo: $('.feature-box', 'two')[1],
     svgPen: $('.feature-box__svg--pen'),
-    svgLap: $('.feature-box__svg--laptop')
+    svgLap: $('.feature-box__svg--laptop'),
+    menu: $('.navigation__list'),
+    menuCheckbox: $('.navigation__checkbox')
 };
 
 //Scroll animations
@@ -49,8 +51,6 @@ function checkSlide(e){
     const bottomPos = window.scrollY + window.innerHeight;
 
     
-    console.log(bottomPos, posTriggers.featureBoxOne, posTriggers.featureBoxTwo);
-    //console.log(elements.featureBoxTwo.offsetHeight, elements.featureBoxOne.offsetTop, elements.featureBoxTwo.offsetTop, elements.wcidSection.offsetTop);
 
     if(screen.width >= 600){
 
@@ -74,3 +74,11 @@ function checkSlide(e){
 
 }
 window.addEventListener('scroll', debounce(checkSlide));
+
+
+//menu navigation
+
+elements.menu.addEventListener('click', e => {
+    if(!e.target.matches('a')) return;
+    elements.menuCheckbox.checked = false;
+});
