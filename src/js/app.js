@@ -40,8 +40,8 @@ const elements = {
 const posTriggers = {
     book: elements.book.parentElement.offsetTop,
     bookParentSize: elements.book.parentElement.offsetHeight,
-    featureBoxOne: elements.featureBoxOne.offsetTop + elements.wcidSection.offsetTop + elements.featureBoxOne.offsetHeight,
-    featureBoxTwo: elements.featureBoxTwo.offsetTop + elements.wcidSection.offsetTop + elements.featureBoxTwo.offsetHeight 
+    featureBoxOne: elements.featureBoxOne.offsetTop + elements.wcidSection.offsetTop + elements.featureBoxOne.offsetHeight + 100,
+    featureBoxTwo: elements.featureBoxTwo.offsetTop + elements.wcidSection.offsetTop + elements.featureBoxTwo.offsetHeight + 100 
 }
 
 function checkSlide(e){
@@ -49,7 +49,8 @@ function checkSlide(e){
     const bottomPos = window.scrollY + window.innerHeight;
 
     
-    console.log(bottomPos, posTriggers.featureBoxTwo, posTriggers.featureBoxTwo);
+    console.log(bottomPos, posTriggers.featureBoxOne, posTriggers.featureBoxTwo);
+    //console.log(elements.featureBoxTwo.offsetHeight, elements.featureBoxOne.offsetTop, elements.featureBoxTwo.offsetTop, elements.wcidSection.offsetTop);
 
     if(screen.width >= 600){
 
@@ -62,7 +63,7 @@ function checkSlide(e){
         elements.svgPen.classList.add('feature-box__svg--pen-active');
     }
 
-    if(bottomPos >= posTriggers.featureBoxTwo){
+    if(bottomPos >= posTriggers.featureBoxTwo + 100){
         elements.svgLap.classList.add('feature-box__svg--laptop-active');
     }
     

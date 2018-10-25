@@ -34,6 +34,12 @@ ul {
     list-style: none;
 }
 
+abbr {
+    text-decoration: none;
+    border-bottom: none;
+    font-weight: inherit;
+}
+
 .section-title {
     text-align: center;
     font-size:3rem;

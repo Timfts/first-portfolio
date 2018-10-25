@@ -29,17 +29,20 @@
         shape-outside: circle(50% at 50% 50%);
         position:relative;
         overflow: hidden;
+        margin-top:2rem;
 
         &--design {
             float:left;
             border-color: $color-wcid-icon-one;
             margin-right:2.4rem;
+           
         }
 
         &--develop {
             float:right;
             border-color:$color-main-blue;
             margin-left:2.4rem;
+            margin-bottom:2rem;
         }
 
 
