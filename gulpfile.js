@@ -31,40 +31,44 @@ const paths = {
 
 //Production
 
-gulp.task('htmlProd', () => {
+gulp.task('htmlProd', htmlProd);
+function htmlProd (){
     return gulp.src(paths.srcIndex)
     .pipe(gulp.dest(paths.prodRoot))
     .pipe(browserSync.stream());
-});
+}
 
 
-gulp.task('sassProd', () => {
+gulp.task('sassProd', sassProd);
+function sassProd(){
     return gulp.src(paths.srcStyles)
     .pipe(sourcemap.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemap.write(paths.prodMaps))
     .pipe(gulp.dest(paths.prodStyle))
     .pipe(browserSync.stream());
-});
+} 
 
 
-gulp.task('jsProd', () => {
+gulp.task('jsProd', jsProd);
+function jsProd(){
     return gulp.src(paths.srcScript)
     .pipe(sourcemap.init())
     .pipe(babel())
     .pipe(sourcemap.write('maps'))
     .pipe(gulp.dest(paths.prodScript))
     .pipe(browserSync.stream());
-});
+}
 
 
-gulp.task('imagesProd', () => {
+gulp.task('imagesProd', imagesProd);
+function imagesProd(){
     return gulp.src(paths.srcImages)
     .pipe(gulp.dest(paths.prodImages))
     .pipe(browserSync.stream());
-});
+}
 
-gulp.task('prod', ['htmlProd', 'sassProd', 'jsProd', 'imagesProd']);
+gulp.task('prod', gulp.parallel('htmlProd', 'sassProd', 'jsProd', 'imagesProd'));
 
 gulp.task('serve', () => {
     browserSync.init({
@@ -73,10 +77,10 @@ gulp.task('serve', () => {
         }
     });
 
-    gulp.watch(paths.srcIndex,['htmlProd'] );
-    gulp.watch(paths.srcStyles,['sassProd']);
-    gulp.watch(paths.srcScript,['jsProd']);
-    gulp.watch(paths.srcImages,['imagesProd'] );
+    gulp.watch(paths.srcIndex, htmlProd );
+    gulp.watch(paths.srcStyles, sassProd);
+    gulp.watch(paths.srcScript, jsProd);
+    gulp.watch(paths.srcImages, imagesProd );
 });
 
 
@@ -111,4 +115,4 @@ gulp.task('jsBuild', () => {
 });
 
 
-gulp.task('build', ['htmlBuild', 'sassBuild', 'jsBuild']);
+gulp.task('build', gulp.parallel('htmlBuild', 'sassBuild', 'jsBuild'));
