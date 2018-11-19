@@ -39,11 +39,15 @@
         &--twitter:hover {
             fill:$twitter;
         }
+
+        &--dribbble:hover {
+            fill:$dribbble;
+        }
     }
 
 
     &--footer {
-        width:24rem;
+        width:26rem;
         margin:2.5rem auto;
 
         & .social__li {

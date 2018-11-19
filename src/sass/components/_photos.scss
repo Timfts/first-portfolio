@@ -54,7 +54,12 @@
 
     &__image {
         height:80%;
-        background-color: black;
+        background-position: center;
+        background-size:cover;
+
+        &--sb{
+            background-image:url('../img/galeria/sb.jpg');
+        }
     }
 
 

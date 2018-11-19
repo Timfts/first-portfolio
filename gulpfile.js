@@ -114,5 +114,11 @@ gulp.task('jsBuild', () => {
     .pipe(gulp.dest(paths.buildScript));
 });
 
+gulp.task('imagesBuild', imagesProd);
+function imagesProd(){
+    return gulp.src(paths.srcImages)
+    .pipe(gulp.dest(paths.buildImages))
+    .pipe(browserSync.stream());
+}
 
-gulp.task('build', gulp.parallel('htmlBuild', 'sassBuild', 'jsBuild'));
+gulp.task('build', gulp.parallel('htmlBuild', 'sassBuild', 'jsBuild', 'imagesBuild'));
