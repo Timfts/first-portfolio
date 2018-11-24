@@ -14,22 +14,22 @@
     }
 
     &__link:hover &__text {
-        color:$behance;
+        color:$dribbble-two;
     }
 
-    &__link:hover &__behance {
-        fill:$behance;
+    &__link:hover &__dribbble {
+        fill:$dribbble-two;
     }
 
     &__text,
-    &__behance {
+    &__dribbble {
         transition:all .5s;
     }
 
     &__text {
         font-size: 2.3rem;
     }
-    &__behance {
+    &__dribbble {
         fill:$color-main-blue;
         width:15rem;
         
