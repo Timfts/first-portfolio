@@ -88,12 +88,14 @@ gulp.task('serve', () => {
 
 //build
 
-gulp.task('htmlBuild', () => {
+gulp.task('htmlBuild', htmlBuild);
+function htmlBuild (){
     return gulp.src(paths.srcIndex)
     .pipe(gulp.dest(paths.buildRoot));
-});
+}
 
-gulp.task('sassBuild', () => {
+gulp.task('sassBuild', sassBuild);
+function sassBuild (){
     return gulp.src(paths.srcStyles)
     .pipe(sass({
         errLogToConsole: true,
@@ -104,18 +106,20 @@ gulp.task('sassBuild', () => {
         browsers: ['last 2 versions', 'Firefox ESR', '> 0.5%', 'not dead']
     }))
     .pipe(gulp.dest(paths.buildStyle));
-});
+}
 
-gulp.task('jsBuild', () => {
+
+gulp.task('jsBuild', jsBuild);
+function jsBuild() {
     return gulp.src(paths.srcScript)
     .pipe(babel())
     .pipe(concat("app.js"))
     .pipe(uglify())
     .pipe(gulp.dest(paths.buildScript));
-});
+}
 
-gulp.task('imagesBuild', imagesProd);
-function imagesProd(){
+gulp.task('imagesBuild', imagesBuild);
+function imagesBuild(){
     return gulp.src(paths.srcImages)
     .pipe(gulp.dest(paths.buildImages))
     .pipe(browserSync.stream());
