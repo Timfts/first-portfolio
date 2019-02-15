@@ -78,6 +78,9 @@
         position:absolute;
         top:6.5rem;
         left:4.5rem;
+        background-image:url('../img/profile.jpg');
+        background-position:center;
+        background-size:cover;
 
         @include respond(tab-port){
             width:8rem;
