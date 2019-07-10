@@ -73,7 +73,7 @@ gulp.task('prod', gulp.parallel('htmlProd', 'sassProd', 'jsProd', 'imagesProd'))
 gulp.task('serve', () => {
     browserSync.init({
         server:{
-            baseDir:"prod"
+            baseDir:"docs"
         }
     });
 
