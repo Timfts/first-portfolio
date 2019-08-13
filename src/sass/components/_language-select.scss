@@ -1,0 +1,18 @@
+.language-selector {
+    display:inline-block;
+    position:absolute;
+    top:10%;
+    right:10%;
+    color:$color-wcid-icon-one;
+
+    @include respond(tab-land){
+        right:15%;
+    }
+
+    @include respond(tab-port){
+        top:6%;
+    }
+    @include respond(phone){
+        right:24%;
+    }
+}

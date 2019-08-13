@@ -17,7 +17,7 @@ const paths = {
     buildScript: './docs/js',
     buildImages: './docs/img',
     prodRoot: './prod',
-    prodStyle: './prod/css',
+    prodStyle: './docs/css',
     prodMaps: './maps',
     prodScript: './prod/js',
     prodImages: './prod/img'
