@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/TimFont/firstPortfolio#readme",
   "devDependencies": {
-    "@babel/core": "^7.1.2",
+    "@babel/core": "^7.20.7",
     "@babel/preset-env": "^7.1.0",
     "autoprefixer": "^9.1.5",
     "browser-sync": "^2.24.7",
